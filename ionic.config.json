@@ -1,0 +1,7 @@
+{
+  "name": "coop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
