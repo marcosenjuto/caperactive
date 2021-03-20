@@ -14,6 +14,10 @@ const routes: Routes = [
         component: HomePage,
       },
       {
+        path: 'profile',
+        loadChildren: () => import ('../profile/profile.module').then(m => m.ProfilePageModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'

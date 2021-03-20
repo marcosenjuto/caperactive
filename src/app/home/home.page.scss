@@ -8,20 +8,30 @@ ion-toolbar{
 ion-content{
   position: relative;
   top: -30px;
-  --background: linear-gradient(var(--ion-color-primary-contrast), #fff);
+ /*  --background: linear-gradient(var(--ion-color-primary-contrast), #fff); */
 }
 .header{
-  padding:20px;
+  padding:20px 20px 50px;
   margin: 20px 0px;
+  position: sticky;
+  top: -52px;
+  width: 100%;
+  background: linear-gradient(0deg, #ffffff00 0%, var(--ion-color-medium-contrast) 60%);
+  transition: 300ms ease all;
   h2{
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 900;
     margin-bottom: 30px;
   }
 
+  &:focus-within{
+  background: linear-gradient(0deg, #ffffff00 5%, var(--ion-color-medium-contrast) 20%);
+  }
+
   .search, .filter{
     margin: 25px 0px;
-    background: linear-gradient(0deg, #ffffff,var(--ion-color-medium-contrast));
+    position: -webkit-sticky;
+    top: 0px;
     border-radius: 21px;
     height: 42px;
     padding: 8px;
@@ -30,23 +40,61 @@ ion-content{
     flex-direction: row;
     align-items: center;
     /* box-shadow: 2px 1px 10px var(--ion-color-dark), -2px -2px 2px var(--ion-color-secondary-contrast) ; */
-    box-shadow: -4px -2px 4px #FFFFFF, 4px 2px 4px rgba(136, 165, 191, 0.12);
+    box-shadow: -2px -4px 4px rgba(255,255,255, 0.5), 4px 2px 4px #8d4e0005;
+    border: 0px solid rgba(0,0,0,0);
+    transition: all 200ms ease;
+/*     ion-input{
+      --placeholder-font-style: 'Red Hat Display', sans-serif;
+    } */
     ion-icon{
       height: 28px;
       width: 28px;
     }
     &:hover{
-      border: 2px solid var(--ion-color-primary-shade);
+      border:1px solid var(--ion-color-secondary);
+      /* box-shadow: -8px -4px 8px rgba(255,255,255, 0.8), 4px 2px 16px #8d4e0015; */
+      box-shadow: 8px 4px 8px rgba(255,255,255, 0.8), -4px -2px 8px #8d4e0005;
     }
   }
 
   .filter{
     justify-content: start;
+    margin-bottom: 0px;
     h3{
-      color:rgba(0,0,0,0.7);
+      color:rgba(0,0,0,0.5);
       font-size: 16px;
-      margin: 15px;
+      margin: 12px 4px;
       font-weight: 200;
     }
+    ion-icon{
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+/* projects component css */
+
+.proj{
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+  box-shadow: -2px -4px 8px rgba(255,255,255, 0.9), 4px 2px 16px #8d4e0050;
+  background: linear-gradient(#ffe3fa, #e9ddee);
+  margin: 20px 3px;
+  color: #8d4e00;
+  z-index: 1;
+
+  .desc-image{
+    width: 100%;
+  }
+
+  .info-proj{
+    min-width: 250px;
+    width: 60%;
+    h2{
+      font-weight: 900;
+    }
+  
   }
 }
