@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <ion-title>
-      Blank
+      
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -12,9 +12,16 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="header">
+  <h2>Proyectos recomendados</h2>
+  <div class="search">
+    <ion-icon name="search-outline"></ion-icon>
+    <ion-input type="text" placeholder="Buscar"></ion-input>
   </div>
+  
+  <div class="filter">
+    <ion-icon name="filter-circle-outline"></ion-icon>
+    <h3>Filtrar por..</h3>
+  </div>
+</div>
 </ion-content>
