@@ -9,11 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home/home.module';
+import { ProjectPipe } from './pages/project.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ProjectPipe,
   ],
   entryComponents: [],
   imports: [

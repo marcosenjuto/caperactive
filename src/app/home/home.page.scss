@@ -9,6 +9,7 @@ ion-content{
   position: relative;
   top: -30px;
  /*  --background: linear-gradient(var(--ion-color-primary-contrast), #fff); */
+ --background: var(--ion-color-primary-contrast);
 }
 .header{
   padding:20px 20px 50px;
@@ -16,8 +17,13 @@ ion-content{
   position: sticky;
   top: -52px;
   width: 100%;
-  background: linear-gradient(0deg, #ffffff00 0%, var(--ion-color-medium-contrast) 60%);
+  background: linear-gradient(
+    0deg
+    , #ffffff00 50%, var(--ion-color-secondary-contrast) 65%);
   transition: 300ms ease all;
+  background-size: 200% 200%;
+  background-position: 0% 30%;
+  z-index: 300;
   h2{
     font-size: 28px;
     font-weight: 900;
@@ -25,7 +31,8 @@ ion-content{
   }
 
   &:focus-within{
-  background: linear-gradient(0deg, #ffffff00 5%, var(--ion-color-medium-contrast) 20%);
+   /*  background: linear-gradient(0deg, #ffffff00 5%, var(--ion-color-secondary-contrast) 20%); */
+   background-position: 0% 0%;
   }
 
   .search, .filter{
@@ -79,20 +86,52 @@ ion-content{
   display: flex;
   flex-direction: row;
   border-radius: 30px;
-  box-shadow: -2px -4px 8px rgba(255,255,255, 0.9), 4px 2px 16px #8d4e0050;
-  background: linear-gradient(#ffe3fa, #e9ddee);
-  margin: 20px 3px;
-  color: #8d4e00;
+  box-shadow: -2px -4px 12px rgb(255 255 255 / 80%), 4px 2px 10px #8d4e0020;
+  background: linear-gradient(var(--ion-color-primary-contrast),   var(--ion-color-tertiary-contrast), var(--ion-color-secondary-contrast));
+  margin: 20px 10px;
+  position: relative;
   z-index: 1;
+  overflow: hidden;
+  transition: 300ms ease all;
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  .circle{
+    border-radius: 400px;
+    width: 800px;
+    height: 800px;
+    top: -220px;
+    left: calc(-800px + 28%);
+    position: absolute;
+    z-index: 2;
+    /* border: 3px solid black; */
+    overflow: hidden;
+    img{
+      position: absolute;
+      top: 220px;
+      left: calc(800px - 12.5%);
+    }
+  }
 
   .desc-image{
-    width: 100%;
+    img{
+      max-width: fit-content;
+      border: 0;
+      position: absolute;
+      z-index: -2;
+      filter: blur(6px);
+      opacity: 0.6;
+    }
   }
 
   .info-proj{
     min-width: 250px;
     width: 60%;
+    position: relative;
+    left: 30%;
     h2{
+      margin-left: -25px;
       font-weight: 900;
     }
   

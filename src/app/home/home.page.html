@@ -20,7 +20,15 @@
   </div>
 
   <div class="proj" *ngFor="let proj of projects">
+    <div class="info-img circle">
+        <img [src]="proj.picture" alt="">
+  
+      <ion-icon slot="start" name="add"></ion-icon>
+      <h3>hola</h3>
+    </div>
+
     <div class="desc-image">
+      <img [src]="proj.picture" alt="">
     </div>
 
     <div class="info-proj">
